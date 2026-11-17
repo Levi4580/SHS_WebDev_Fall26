@@ -6,7 +6,7 @@
 -->
 
 <head>
-    <title>Bootstrap Examples</title>
+    <title> Bootstrap Examples</title>
 
     <!-- Homepage meta data -->
     <meta charset="utf-8">
@@ -46,10 +46,42 @@
         
         .demo-content.bg-alt {
             background: #abb1b8;
+
+            .hidden {
+    display: none;
+}
+
+a.skip-main {
+    left: -999px;
+    position: absolute;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -999;
+}
+
+a.skip-main:focus,a.skip-main:active {
+    color: #fff;
+    background-color: #000;
+    left: auto;
+    top: auto;
+    width: 30%;
+    height: auto;
+    overflow: auto;
+    margin: 10px 35%;
+    padding: 5px;
+    border-radius: 15px;
+    border: 4px solid red;
+    text-align: center;
+    font-size: 1.2em;
+    z-index: 999;
+}
         }
     </style>
 
     <body>
+<a class="skip-main" tabindex="0" href="#main">Skip to main content</a>
         <!---------------------------------- Begin the nav-bar ----------------------------------->
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
             <div class="container-fluid">
@@ -95,8 +127,9 @@
             <p class="lead"> Let's look at the man different examples of how we can use bootstrap and what bootstrap can do!
             </p>
         </header>
-
+          <div id="main" class="hidden" tabindex="-1"></div>
         <main>
+            <p tabindex="0">This is a pretty cool website!</p>
             <!---------Three Column Layouts------------------------------------>
             <div class="container mt-3">
                 <!--Row with two equal columns-->
